@@ -1,0 +1,69 @@
+html{
+    width:100%;
+    height:100%;
+}
+body{
+    width:100%;
+    height:100%;
+}
+*{
+    margin:0;
+    padding:0;
+}
+.full{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    display: block;
+    background: url("/images/payment-bg.png");
+    background-size:cover;
+    position: fixed;
+    z-index: 9999;
+}
+.diag{
+    width: 240px;
+    height: 220px;
+    background: #f5f5f5;
+    position: absolute;
+    border-radius: 5px;
+    padding: 10px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.diag a img{
+    position: absolute;
+    left: 5px;
+    top: 18px;
+}
+.payTitle{
+    display: block;
+    text-align: center;
+    width:100%;
+    margin-top: 10px;
+    font-size: 20px;
+}
+em{
+    border-bottom: 1px solid #9d9d9d;
+    display: block;
+    margin: 10px 0;
+}
+p{
+    text-align: center;
+}
+h5{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px;
+}
+.pay{
+    width:80%;
+    height: 50px;
+    display: block;
+    border-radius: 5px;
+    background: #67b168;
+    line-height: 50px;
+    text-align: center;
+    margin:0 auto;
+    color: #FFFFFF;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oxchains.mapper.UserMapper">
+
+    <sql id="columns">
+        id,
+        user_name,
+        password,
+        amount
+    </sql>
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="com.oxchains.model.User">
+        INSERT INTO user(<include refid="columns" />)
+        VALUES (null, #{userName}, #{password}, #{amount})
+    </insert>
+
+    <select id="findAll">
+        SELECT <include refid="columns"/> FROM user
+    </select>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.oxchains.model.User">
+        SELECT <include refid="columns"/> FROM USER
+        WHERE id = #{value}
+    </select>
+
+    <update id="plusAmount">
+        UPDATE user set amount=amount+#{money}
+        WHERE id = #{id}
+    </update>
+
+    <update id="minusAmount">
+        UPDATE user set amount=amount-#{money}
+        WHERE id = #{id}
+    </update>
+</mapper>
